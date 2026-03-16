@@ -1,0 +1,15 @@
+/*
+E. Area of a Circle
+Area = π*R2.
+Note: consider π = 3.141592653.
+*/
+#include <iostream>
+#include<iomanip>
+using namespace std;
+int main(){
+    double R;
+    cin>>R;
+    double Pi=3.141592653;
+    cout << fixed <<R*R*Pi << setprecision(9);
+ 
+}
