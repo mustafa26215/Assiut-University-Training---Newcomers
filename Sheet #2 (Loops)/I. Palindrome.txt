@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+ 
+int main() {
+    int Number1;
+    cin >> Number1;
+ 
+    int Temp = Number1;  
+    int Number2 = 0;
+ 
+    while (Number1 > 0) {
+        int Remainder = Number1 % 10;
+        Number2 = (Number2 * 10) + Remainder;
+        Number1 = Number1 / 10;
+    }
+ 
+    cout << Number2 << endl;
+ 
+    if (Temp == Number2) {
+        cout << "YES" << endl;
+    } else {
+        cout << "NO" << endl;
+    }
+ 
+    return 0;
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+ 
+int main() {
+    string s;
+    cin >> s;
+ 
+    int pos = s.find('.');
+ 
+    // if no decimal point → integer
+    if (pos == -1) {
+        cout << "int " << s;
+        return 0;
+    }
+ 
+    string integerPart = s.substr(0, pos);
+    string decimalPart = s.substr(pos + 1);
+ 
+    // check if decimal part is all zeros
+    bool isInteger = true;
+    for (char c : decimalPart) {
+        if (c != '0') {
+            isInteger = false;
+            break;
+        }
+    }
+ 
+    if (isInteger)
+        cout << "int " << integerPart;
+    else
+        cout << "float " << integerPart << " 0." << decimalPart;
+ 
+    return 0;
+}

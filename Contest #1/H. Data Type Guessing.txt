@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long n, k, a;
+    cin >> n >> k >> a;
+
+    // Check if result is double
+    if ((n * k) % a != 0) {
+        cout << "double";
+        return 0;
+    }
+
+    // Safe calculation
+    long long result;
+
+    if (n % a == 0)
+        result = (n / a) * k;
+    else
+        result = (k / a) * n;
+
+    if (result <= 2147483647)
+        cout << "int";
+    else
+        cout << "long long";
+
+    return 0;
+}

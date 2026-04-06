@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+//Given a number N. Print numbers from 1 to N in separate lines.
+
+
+int main()
+{
+    int Num;
+    cin>>Num;
+    for(int i=1;i<=Num;i++){
+        cout<<i<<endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int Even = 0;
+int Odd = 0;
+int Positive = 0;
+int Negative = 0;
+int a;
+cin>>a;
+int x;
+for(int i=0;i<a;i++){
+    cin>>x;
+    if(x==0){
+    Even++;
+        
+    }
+    else if((x%2==0)&&(x>0)){
+        Even++;
+        Positive++;
+    }
+    else if((x%2==0)&&(x<0)){
+         Even++;
+         Negative++;
+    }
+    else if((x%2!=0)&&(x>0)){
+        Positive++;
+        Odd++;
+    }
+    else if ((x%2!=0)&&(x<0)){
+        Negative++;
+        Odd++;
+
+    }
+}
+/*
+Even
+Odd
+Positive
+Negative
+*/
+cout<<"Even: "<<Even<<endl;
+cout<<"Odd: "<<Odd<<endl;
+cout<<"Positive: "<<Positive<<endl;
+cout<<"Negative: "<<Negative<<endl;
+
+
+    return 0;
+}
